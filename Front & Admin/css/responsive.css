@@ -1,0 +1,1413 @@
+
+@media (min-width:320px) and (max-width: 768px){
+    .download-top .col-md-4 {
+     text-align: left;
+        
+        padding-left: 0;
+    }
+    
+    
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-transition: 300ms linear;
+    transition: 300ms linear;
+    overflow: hidden;
+    height: 0%;
+}
+
+#mobile-nav-close-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    color: #212226;
+    cursor: pointer;
+    font-weight: 400;
+    position: absolute;
+    left: 90%;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+#mobile-nav-content {
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+#mobile-nav ul li a img {
+    max-width: 10%;
+}
+
+#mobile-nav a {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.navbar-up .btn-header {
+        background-color: #6255a5;
+        width: 70px;
+        margin-top: -6px;
+        margin-right: 50px;
+
+    }
+
+    .navbar-brand img {
+        height: 25px;
+        margin-left: 50px;
+    }
+
+}
+@media (max-width: 760px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr,
+    dashboard-01-table,
+    tab-mang-admin
+    {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .horizontal-scroll-wrapper {
+        -webkit-transform: rotate(-90deg) translate(-40px, 100px);
+        transform: rotate(-90deg) translate(-40px, 100px);
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+	Label the data
+	*/
+  .tab-down  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+  .tab-down  td:nth-of-type(2):before {
+        content: "NOTE TITTLE";
+    }
+
+  .tab-down  td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+ .tab-down   td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+.tab-down    td:nth-of-type(5):before {
+        content: "SELL TYPE";
+    }
+
+ .tab-down   td:nth-of-type(6):before {
+        content: "PRICE";
+    }
+
+.tab-down    td:nth-of-type(7):before {
+        content: "DOWNLOADED";
+    }
+
+ .tab-down   td:nth-of-type(8):before {
+        content: "DATE/TIME";
+    }
+
+ .tab-down   td:nth-of-type(9):before {
+        content: "EYES";
+    }
+
+.tab-down    td:nth-of-type(10):before {
+        content: "ARROW";
+    }
+    
+    .tab-dash-01  td:nth-of-type(1):before {
+        content: "ADDED DATE";
+    }
+
+  .tab-dash-01   td:nth-of-type(2):before {
+        content: "TITTLE";
+    }
+
+ .tab-dash-01    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+ .tab-dash-01    td:nth-of-type(4):before {
+        content: "STATUS";
+    }
+
+ .tab-dash-01    td:nth-of-type(5):before {
+        content: "ACTIONS";
+    }
+    
+     .tab-dash-02  td:nth-of-type(1):before {
+        content: "ADDED DATE";
+    }
+
+ .tab-dash-02   td:nth-of-type(2):before {
+        content: "TITTLE";
+    }
+
+.tab-dash-02    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+.tab-dash-02    td:nth-of-type(4):before {
+        content: "SELL TYPE";
+    }
+
+ .tab-dash-02   td:nth-of-type(5):before {
+        content: "PRICE";
+    }
+
+.tab-dash-02    td:nth-of-type(6):before {
+        content: "ACTIONS";
+    }
+    
+    .tab-mang-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-admin     td:nth-of-type(2):before {
+        content: "FIRST NAME";
+    }
+
+ .tab-mang-admin     td:nth-of-type(3):before {
+        content: "LAST NAME";
+    }
+
+ .tab-mang-admin     td:nth-of-type(4):before {
+        content: "EMAIL";
+    }
+
+ .tab-mang-admin     td:nth-of-type(5):before {
+        content: "PHONE NO.";
+    }
+
+ .tab-mang-admin     td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-mang-admin     td:nth-of-type(7):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-admin     td:nth-of-type(8):before {
+        content: "ACTION";
+    }
+    
+     .tab-mang-cate-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(2):before {
+        content: "CATEGORY";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(3):before {
+        content: "DESCRIPTION";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+  .tab-mang-cate-admin   td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+    
+     .tab-mang-country-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(2):before {
+        content: "COUNTRY NAME";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(3):before {
+        content: "COUNTRY CODE";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+  .tab-mang-country-admin    td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+    
+.tab-mang-type-admin   td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(2):before {
+        content: "TYPE";
+    }
+
+ .tab-mang-type-admin    td:nth-of-type(3):before {
+        content: "DESCRIPTION";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+  .tab-mang-type-admin  td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+
+    .tab-memb-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-memb-admin  td:nth-of-type(2):before {
+        content: "FIRST NAME";
+    }
+    
+ .tab-memb-admin    td:nth-of-type(3):before {
+        content: "LAST NAME";
+    } 
+
+  .tab-memb-admin  td:nth-of-type(4):before {
+        content: "EMAIL";
+    }
+
+  .tab-memb-admin  td:nth-of-type(5):before {
+        content: "JOINING DATE";
+    }
+
+ .tab-memb-admin   td:nth-of-type(6):before {
+        content: "UNDER REVIEW NOTES";
+    }
+
+  .tab-memb-admin   td:nth-of-type(7):before {
+        content: "PUBLISHED NOTES";
+    }
+
+ .tab-memb-admin    td:nth-of-type(8):before {
+        content: "DOWNLOADED NOTES";
+    }
+
+ .tab-memb-admin td:nth-of-type(9):before {
+        content: "TOTAL EXPENSES";
+    }
+
+ .tab-memb-admin   td:nth-of-type(10):before {
+        content: "TOTAL EARNING";
+    }
+
+  .tab-memb-details-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-memb-details-admin  td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-memb-details-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-memb-details-admin  td:nth-of-type(4):before {
+        content: "STATUS";
+    }
+
+  .tab-memb-details-admin  td:nth-of-type(5):before {
+        content: "DOWNLOADED NOTES";
+    }
+
+ .tab-memb-details-admin   td:nth-of-type(6):before {
+        content: "TOTAL EARNINGS";
+    }
+
+  .tab-memb-details-admin   td:nth-of-type(7):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-memb-details-admin    td:nth-of-type(8):before {
+        content: "PUBLISHED DATE";
+    }
+  .tab-spam-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-spam-admin  td:nth-of-type(2):before {
+        content: "REPORTED BY";
+    }
+    
+ .tab-spam-admin    td:nth-of-type(3):before {
+        content: "NOTE TITLE";
+    } 
+
+  .tab-spam-admin  td:nth-of-type(4):before {
+        content: "CATEGORY";
+    }
+
+  .tab-spam-admin  td:nth-of-type(5):before {
+        content: "DATE EDITED";
+    }
+
+ .tab-spam-admin   td:nth-of-type(6):before {
+        content: "REMARK";
+    }
+
+  .tab-spam-admin   td:nth-of-type(7):before {
+        content: "ACTION";
+    } 
+    
+      
+.tab-notes-review-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+.tab-notes-review-admin    td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+.tab-notes-review-admin   td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-notes-review-admin  td:nth-of-type(4):before {
+        content: "SELLER";
+    }
+
+ .tab-notes-review-admin   td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-notes-review-admin   td:nth-of-type(7):before {
+        content: "STATUS";
+    }
+
+.tab-notes-review-admin   td:nth-of-type(8):before {
+        content: "ACTION";
+    } 
+    
+    
+.tab-published-notes--admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+.tab-published-notes--admin  td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+.tab-published-notes--admin   td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-published-notes--admin td:nth-of-type(4):before {
+        content: "SELL TYPE";
+    }
+    
+
+ .tab-published-notes--admin  td:nth-of-type(5):before {
+        content: "PRICE";
+    }
+
+ .tab-published-notes--admin  td:nth-of-type(6):before {
+        content: "SELLER";
+    }
+
+.tab-published-notes--admin  td:nth-of-type(8):before {
+        content: "PUBLISHED DTE";
+    } 
+    
+
+.tab-published-notes--admin  td:nth-of-type(9):before {
+        content: "APROVED BY";
+    }      
+
+.tab-published-notes--admin  td:nth-of-type(10):before {
+        content: "NUMBER OF DOWNLOADS";
+    }
+    
+.tab-downloaded-notes-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-downloaded-notes-admin td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-downloaded-notes-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-downloaded-notes-admin  td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+  .tab-downloaded-notes-admin  td:nth-of-type(6):before {
+        content: "SELLER";
+    }
+
+ .tab-downloaded-notes-admin   td:nth-of-type(8):before {
+        content: "SELL TYPE";
+    }
+
+  .tab-downloaded-notes-admin   td:nth-of-type(9):before {
+        content: "PRICE";
+    }
+
+ .tab-downloaded-notes-admin    td:nth-of-type(10):before {
+        content: "DOWNLOADED DATE/TYPE";
+    }
+    
+     .tab-rejected-notes-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-rejected-notes-admin td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-rejected-notes-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-rejected-notes-admin  td:nth-of-type(4):before {
+        content: "SELLER";
+    }
+
+  .tab-rejected-notes-admin  td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-rejected-notes-admin   td:nth-of-type(7):before {
+        content: "REJECTED BY";
+    }
+    
+.tab-rejected-notes-admin   td:nth-of-type(8):before {
+        content: "REMARK";
+    }    
+    
+    
+     .tab-reject-note-front td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-reject-note-front td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-reject-note-front    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-reject-note-front td:nth-of-type(4):before {
+        content: "REMARKS";
+    }
+
+  .tab-reject-note-front td:nth-of-type(5):before {
+        content: "CLONE";
+    }
+    
+            
+.tab-buyer-front td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+  .tab-buyer-front td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-buyer-front  td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-buyer-front td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+ .tab-buyer-front td:nth-of-type(5):before {
+        content: "PHONE NO.";
+    }
+
+ .tab-buyer-front  td:nth-of-type(6):before {
+        content: "SELL TYPE";
+    }
+
+  .tab-buyer-front  td:nth-of-type(7):before {
+        content: "PRICE";
+    }
+
+ .tab-buyer-front    td:nth-of-type(8):before {
+        content: "DOWNLOADED";
+    }
+     .tab-buyer-front    td:nth-of-type(9):before {
+        content: "DATE/TIME";
+    }
+
+           
+.tab-dash-admin-01 td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+  .tab-dash-admin-01 td:nth-of-type(2):before {
+        content: " TITLE";
+    }
+    
+ .tab-dash-admin-01  td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-dash-admin-01 td:nth-of-type(4):before {
+        content: "ATTACHMENT SIZE";
+    }
+
+ .tab-dash-admin-01 td:nth-of-type(5):before {
+        content: "SELL TYPE";
+    }
+
+ .tab-dash-admin-01  td:nth-of-type(6):before {
+        content: "PRICE";
+    }
+
+  .tab-dash-admin-01 td:nth-of-type(7):before {
+        content: "PUBLISHER";
+    }
+
+ .tab-dash-admin-01   td:nth-of-type(8):before {
+        content: "PUBLISHED DATE";
+    }
+     .tab-dash-admin-01   td:nth-of-type(9):before {
+        content: "NUMBER OF DOWNLOADS";
+    }
+
+
+    
+    .faq-02-form option,
+    .faq-03-form option,
+    .faq-04-form option,
+    .faq-05-form option,
+    .faq-06-form option,
+    .faq-07-form option {
+        transform: translate(320px, -29px);
+    }
+
+    .faq-01-form input {
+        height: 150px;
+    }
+
+    .faq-01-form ::-webkit-input-placeholder {
+        transform: translateY(-45px);
+        color: #333333;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    .faq-01-form p {
+        transform: translate(15px, -45px);
+        font-weight: 400;
+        color: #333333;
+        font-size: 14px;
+    }
+    
+    .download-top .col-md-2 input {
+        margin-left: -12px;
+    }
+    
+    .download-top .col-md-2 img {
+        margin-left: -180px;
+        -webkit-transform: translateY(10px); 
+        transform: translateY(10px);
+    
+    }
+    .download-top .col-md-1 .btn-download {
+       -webkit-transform: translate(-17px,-7px); 
+        transform: translate(-17px,-7px);
+    }
+    
+     .download-top-01 .col-md-2 input {
+        margin-left: -12px;
+    }
+    
+    .download-top-01 .col-md-2 img {
+        margin-left: -180px;
+        -webkit-transform: translateY(10px); 
+        transform: translateY(10px);
+    
+    }
+    .download-top-01 .col-md-1 .btn-download {
+       -webkit-transform: translate(-17px,-7px); 
+        transform: translate(-17px,-7px);
+    }
+    
+    
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-transition: 300ms linear;
+    transition: 300ms linear;
+    overflow: hidden;
+    height: 0%;
+}
+
+#mobile-nav-close-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    color: #212226;
+    cursor: pointer;
+    font-weight: 400;
+    position: absolute;
+    left: 90%;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+#mobile-nav-content {
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+#mobile-nav ul li a img {
+    max-width: 10%;
+}
+
+#mobile-nav a {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.navbar-up .btn-header {
+        background-color: #6255a5;
+        width: 70px;
+        margin-top: -6px;
+        margin-right: 50px;
+
+    }
+
+    .navbar-brand img {
+        height: 25px;
+        margin-left: 50px;
+    }
+
+}
+
+
+@media(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr
+    
+    {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr
+   
+    {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        
+    }
+
+    .download-top input,
+    .download-top .btn-download {
+        -webkit-transform: translate(-14px, -5px);
+        transform: translate(-14px, -5px);
+    }
+    .download-top h3{
+        margin-top: 0px;
+        padding-bottom:
+/*            margin-bottom: 20px;*/
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+   
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 40%;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+	Label the data
+	*/
+   
+    .tab-down  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+  .tab-down  td:nth-of-type(2):before {
+        content: "NOTE TITTLE";
+    }
+
+  .tab-down  td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+ .tab-down   td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+.tab-down    td:nth-of-type(5):before {
+        content: "SELL TYPE";
+    }
+
+ .tab-down   td:nth-of-type(6):before {
+        content: "PRICE";
+    }
+
+.tab-down    td:nth-of-type(7):before {
+        content: "DOWNLOADED";
+    }
+
+ .tab-down   td:nth-of-type(8):before {
+        content: "DATE/TIME";
+    }
+
+ .tab-down   td:nth-of-type(9):before {
+        content: "EYES";
+    }
+
+.tab-down    td:nth-of-type(10):before {
+        content: "ARROW";
+    }
+    
+    .tab-dash-01  td:nth-of-type(1):before {
+        content: "ADDED DATE";
+    }
+
+  .tab-dash-01   td:nth-of-type(2):before {
+        content: "TITTLE";
+    }
+
+ .tab-dash-01    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+ .tab-dash-01    td:nth-of-type(4):before {
+        content: "STATUS";
+    }
+
+ .tab-dash-01    td:nth-of-type(5):before {
+        content: "ACTIONS";
+    }
+    
+     .tab-dash-02  td:nth-of-type(1):before {
+        content: "ADDED DATE";
+    }
+
+ .tab-dash-02   td:nth-of-type(2):before {
+        content: "TITTLE";
+    }
+
+.tab-dash-02    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    }
+
+.tab-dash-02    td:nth-of-type(4):before {
+        content: "SELL TYPE";
+    }
+
+ .tab-dash-02   td:nth-of-type(5):before {
+        content: "PRICE";
+    }
+
+.tab-dash-02    td:nth-of-type(6):before {
+        content: "ACTIONS";
+    }
+    
+    .tab-mang-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-admin     td:nth-of-type(2):before {
+        content: "FIRST NAME";
+    }
+
+ .tab-mang-admin     td:nth-of-type(3):before {
+        content: "LAST NAME";
+    }
+
+ .tab-mang-admin     td:nth-of-type(4):before {
+        content: "EMAIL";
+    }
+
+ .tab-mang-admin     td:nth-of-type(5):before {
+        content: "PHONE NO.";
+    }
+
+ .tab-mang-admin     td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-mang-admin     td:nth-of-type(7):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-admin     td:nth-of-type(8):before {
+        content: "ACTION";
+    }
+    
+     .tab-mang-cate-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(2):before {
+        content: "CATEGORY";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(3):before {
+        content: "DESCRIPTION";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+  .tab-mang-cate-admin   td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-cate-admin    td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+    
+     .tab-mang-country-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(2):before {
+        content: "COUNTRY NAME";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(3):before {
+        content: "COUNTRY CODE";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+  .tab-mang-country-admin    td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-country-admin     td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+
+    
+.tab-mang-type-admin   td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(2):before {
+        content: "TYPE";
+    }
+
+ .tab-mang-type-admin    td:nth-of-type(3):before {
+        content: "DESCRIPTION";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(4):before {
+        content: "DATE ADDED";
+    }
+
+  .tab-mang-type-admin  td:nth-of-type(5):before {
+        content: "ADDED BY";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(6):before {
+        content: "ACTIVE";
+    }
+
+ .tab-mang-type-admin     td:nth-of-type(7):before {
+        content: "ACTION";
+    }
+
+  .tab-memb-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-memb-admin  td:nth-of-type(2):before {
+        content: "FIRST NAME";
+    }
+    
+ .tab-memb-admin    td:nth-of-type(3):before {
+        content: "LAST NAME";
+    } 
+
+  .tab-memb-admin  td:nth-of-type(4):before {
+        content: "EMAIL";
+    }
+
+  .tab-memb-admin  td:nth-of-type(5):before {
+        content: "JOINING DATE";
+    }
+
+ .tab-memb-admin   td:nth-of-type(6):before {
+        content: "UNDER REVIEW NOTES";
+    }
+
+  .tab-memb-admin   td:nth-of-type(7):before {
+        content: "PUBLISHED NOTES";
+    }
+
+ .tab-memb-admin    td:nth-of-type(8):before {
+        content: "DOWNLOADED NOTES";
+    }
+
+ .tab-memb-admin td:nth-of-type(9):before {
+        content: "TOTAL EXPENSES";
+    }
+
+ .tab-memb-admin   td:nth-of-type(10):before {
+        content: "TOTAL EARNING";
+    }
+
+ .tab-memb-details-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-memb-details-admin  td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-memb-details-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-memb-details-admin  td:nth-of-type(4):before {
+        content: "STATUS";
+    }
+
+  .tab-memb-details-admin  td:nth-of-type(5):before {
+        content: "DOWNLOADED NOTES";
+    }
+
+ .tab-memb-details-admin   td:nth-of-type(6):before {
+        content: "TOTAL EARNINGS";
+    }
+
+  .tab-memb-details-admin   td:nth-of-type(7):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-memb-details-admin    td:nth-of-type(8):before {
+        content: "PUBLISHED DATE";
+    }
+    
+   .tab-spam-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-spam-admin  td:nth-of-type(2):before {
+        content: "REPORTED BY";
+    }
+    
+ .tab-spam-admin    td:nth-of-type(3):before {
+        content: "NOTE TITLE";
+    } 
+
+  .tab-spam-admin  td:nth-of-type(4):before {
+        content: "CATEGORY";
+    }
+
+  .tab-spam-admin  td:nth-of-type(5):before {
+        content: "DATE EDITED";
+    }
+
+ .tab-spam-admin   td:nth-of-type(6):before {
+        content: "REMARK";
+    }
+
+  .tab-spam-admin   td:nth-of-type(7):before {
+        content: "ACTION";
+    } 
+    
+  .tab-notes-review-admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+.tab-notes-review-admin    td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+.tab-notes-review-admin   td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-notes-review-admin  td:nth-of-type(4):before {
+        content: "SELLER";
+    }
+    
+
+ .tab-notes-review-admin   td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-notes-review-admin   td:nth-of-type(7):before {
+        content: "STATUS";
+    }
+
+.tab-notes-review-admin   td:nth-of-type(8):before {
+        content: "ACTION";
+    }   
+    
+    
+.tab-published-notes--admin  td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+.tab-published-notes--admin  td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+.tab-published-notes--admin   td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-published-notes--admin td:nth-of-type(4):before {
+        content: "SELL TYPE";
+    }
+    
+
+ .tab-published-notes--admin  td:nth-of-type(5):before {
+        content: "PRICE";
+    }
+
+ .tab-published-notes--admin  td:nth-of-type(6):before {
+        content: "SELLER";
+    }
+
+.tab-published-notes--admin  td:nth-of-type(8):before {
+        content: "PUBLISHED DTE";
+    } 
+    
+
+.tab-published-notes--admin  td:nth-of-type(9):before {
+        content: "APROVED BY";
+    }      
+
+.tab-published-notes--admin  td:nth-of-type(10):before {
+        content: "NUMBER OF DOWNLOADS";
+    } 
+    
+.tab-downloaded-notes-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-downloaded-notes-admin td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-downloaded-notes-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-downloaded-notes-admin  td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+  .tab-downloaded-notes-admin  td:nth-of-type(6):before {
+        content: "SELLER";
+    }
+
+ .tab-downloaded-notes-admin   td:nth-of-type(8):before {
+        content: "SELL TYPE";
+    }
+
+  .tab-downloaded-notes-admin   td:nth-of-type(9):before {
+        content: "PRICE";
+    }
+
+ .tab-downloaded-notes-admin    td:nth-of-type(10):before {
+        content: "DOWNLOADED DATE/TYPE";
+    }
+    
+   .tab-rejected-notes-admin td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-rejected-notes-admin td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-rejected-notes-admin    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-rejected-notes-admin  td:nth-of-type(4):before {
+        content: "SELLER";
+    }
+
+  .tab-rejected-notes-admin  td:nth-of-type(6):before {
+        content: "DATE ADDED";
+    }
+
+ .tab-rejected-notes-admin   td:nth-of-type(7):before {
+        content: "REJECTED BY";
+    }
+    
+.tab-rejected-notes-admin   td:nth-of-type(8):before {
+        content: "REMARK";
+    }   
+    
+     .tab-reject-note-front td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+   .tab-reject-note-front td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-reject-note-front    td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+  .tab-reject-note-front td:nth-of-type(4):before {
+        content: "REMARKS";
+    }
+
+  .tab-reject-note-front td:nth-of-type(5):before {
+        content: "CLONE";
+    }
+    
+        
+.tab-buyer-front td:nth-of-type(1):before {
+        content: "SR NO.";
+    }
+
+  .tab-buyer-front td:nth-of-type(2):before {
+        content: "NOTE TITLE";
+    }
+    
+ .tab-buyer-front  td:nth-of-type(3):before {
+        content: "CATEGORY";
+    } 
+
+ .tab-buyer-front td:nth-of-type(4):before {
+        content: "BUYER";
+    }
+
+ .tab-buyer-front td:nth-of-type(5):before {
+        content: "PHONE NO.";
+    }
+
+ .tab-buyer-front  td:nth-of-type(6):before {
+        content: "SELL TYPE";
+    }
+
+  .tab-buyer-front  td:nth-of-type(7):before {
+        content: "PRICE";
+    }
+
+ .tab-buyer-front    td:nth-of-type(8):before {
+        content: "DOWNLOADED";
+    }
+    
+    .tab-buyer-front    td:nth-of-type(9):before {
+        content: "DATE/TIME";
+    }
+    
+    .download-top .col-md-2 img {
+        margin-left: -180px;
+        -webkit-transform: translateY(10px); 
+        transform: translateY(10px);
+    
+    }
+    .download-top .col-md-1 .btn-download {
+       -webkit-transform: translate(-17px,-7px); 
+        transform: translate(-17px,-7px);
+    }
+    
+    
+.navbar-header {
+    position: relative;
+}
+
+#mobile-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-transition: 300ms linear;
+    transition: 300ms linear;
+    overflow: hidden;
+    height: 0%;
+}
+
+#mobile-nav-close-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    color: #212226;
+    cursor: pointer;
+    font-weight: 400;
+    position: absolute;
+    left: 90%;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+#mobile-nav-content {
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+#mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+#mobile-nav ul li a img {
+    max-width: 10%;
+}
+
+#mobile-nav a {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.navbar-up .btn-header {
+        background-color: #6255a5;
+        width: 70px;
+        margin-top: -6px;
+        margin-right: 50px;
+
+    }
+
+    .navbar-brand img {
+        height: 25px;
+        margin-left: 50px;
+    }
+
+}
+
