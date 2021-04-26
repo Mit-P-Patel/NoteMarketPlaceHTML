@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "UserVerification";
+   
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        Email verification
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+
+
+    <!--email verification page-->
+    <section id="email-verification-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+
+
+                    <div class="email-logo">
+
+
+                        <img src="~/Images/pre-login/logo.png">
+                        <h3>Email Verification</h3>
+                        <p>
+                            <span>Dear User</span><br>Thanks for Signing up!<br>Simply click below for email varification.
+                        </p>
+                        <a href="{GenarateUserVerificationLink}" class="btn btn-primary btn-email-ve"><span>VERIFY EMAIL ADDRESS</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

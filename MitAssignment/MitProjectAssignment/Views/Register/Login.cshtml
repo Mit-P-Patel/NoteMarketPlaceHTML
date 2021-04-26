@@ -1,0 +1,121 @@
+﻿@model MitProjectAssignment.Models.UserLogin
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        Login
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+    <section id="login-page">
+        <div class="login-page-bg  img-responsive"></div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="login-page-img text-center">
+                    <img src="~/Images/pre-login/top-logo.png">
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="panel panel-default">
+
+
+
+                        <div class="login-text text-center">
+                            <h2>Login</h2>
+                            <p> Enter your email address and password to login</p>
+                        </div>
+                        <div>
+                            @using (Html.BeginForm("Login","Register"))
+                            {
+                                @Html.AntiForgeryToken()
+                                
+                            <form>
+                                <div class="form-group-login-01">
+                                    <label for="exampleinputEmail1">Email</label>
+                                    <div> @Html.TextBoxFor(a => a.Email, htmlAttributes: new { @class = "form-control", @placeholder = "Enter Your Email" })</div>
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group-login-02">
+                                    <label for="exampleinputPassword1">Password</label>
+                                    <div class="eyes-box text-right">
+                                        <div> @Html.TextBoxFor(a => a.Password, htmlAttributes: new { @class = "form-control", type = "Password", @placeholder = "Enter Your Password" })</div>
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        <label class="text-right" for="forgotpassword"><span class="text-right"><a href="" role="button" id="f-pass">@Html.ActionLink("Forgot Password?", "ForgotPassword")</a></span></label>
+                                        <a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="transform:translateY(-20px)"></i></a>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="form-group-login-03 form-check" style="margin-top:20px">
+                                    @Html.EditorFor(a => a.Rememberme)
+                                    @Html.ValidationMessageFor(a => a.Rememberme, "", new { @class = "text-danger" })
+                                    @Html.LabelFor(a => a.Rememberme, htmlAttributes: new { @class = "" })
+
+
+                                </div>
+                                <div class="login-text-last">
+                                    <button type="submit" class="btn-login btn-primary">LOGIN</button>
+
+                                    <p style="text-align:center">Don't have an password?<span >  <a href="">@Html.ActionLink("SignUp", "SignUpMethod","Register")</a></span></p>
+                                </div>
+                            </form>
+                            }
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--jquery -->
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+</body>
+
+</html>

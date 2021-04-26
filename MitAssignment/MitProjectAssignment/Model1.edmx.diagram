@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32c49121b64f4cc4b59103e8b99a8404" Name="Diagram1">
+        <EntityTypeShape EntityType="MitDatabaseModel.Countrie" Width="1.5" PointX="3.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.Downloads" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.NoteCategories" Width="1.5" PointX="3.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.NoteTypes" Width="1.5" PointX="3.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.ReferenceData" Width="1.5" PointX="3.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.Registration" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.SellerNotes" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.SellerNotesAttachments" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.SellerNotesReportedIssues" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.SellerNotesReviews" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="MitDatabaseModel.UserProfile" Width="1.5" PointX="3" PointY="17.75" IsExpanded="true" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotes_Countrie" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_Downloads_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_Downloads_Registration1" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotesReportedIssues_Downloads" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotesReviews_Downloads" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotes_NoteCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotes_NoteTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotes_ReferenceData" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotes_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotesReportedIssues_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotesReportedIssues_Registration1" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_SellerNotesReviews_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="MitDatabaseModel.FK_UserProfile_Registration" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MitDatabaseModel.SystemConfigurations" Width="1.5" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

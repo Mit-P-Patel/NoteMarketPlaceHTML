@@ -1,0 +1,475 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        Dashboard-01
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+
+<body>
+    <section id="dash-board-admin">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav">
+
+                    <img src="~/Images/pre-login/logo.png">
+
+
+
+                    <ul>
+                        <li><a href="#"><span>@Html.ActionLink("Search Note", "SearchNote", "SearchNote")</span></a></li>
+                        <li><a href="#"><span>Sell Your Notes</span></a></li>
+                        <li><a href="#"><span>@Html.ActionLink("Buyer Request", "BuyerRequest", "BuyerRequest")</span></a></li>
+                        <li><a href="#"><span>@Html.ActionLink("FAQ", "FAQ", "FAQ")</span></a></li>
+                        <li><a href="#"><span>@Html.ActionLink("Contact Us", "ContactUs", "Home")</span></a></li>
+                        <li><button class="btn-user-logout" type="submit" style="background-color:#6255a5;">@Html.ActionLink("LogOut", "LogOut", "Register")</button></li>
+                    </ul><hr>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="download-top">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h3>
+                            Dashboard
+                        </h3>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+
+                    <ul>
+                        <li>
+
+                            <button type="submit" class="btn-download btn-primary btn-submit"><span>@Html.ActionLink("Add Notes", "AddNotes", "AddNotes")</span></button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-01">
+                        <img src="img/User-Profile/user-img.png">
+                        <h5>My Earning</h5>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-02">
+                        <ul>
+                            <li>
+                                <h5>100</h5>
+                                <p>number of notes sold</p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-02">
+                        <ul>
+
+                            <li>
+                                <h5>$10,00,000</h5>
+                                <p>Money Earned</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-03">
+                        <h5>38</h5>
+                        <p>My Downloads</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-04">
+                        <h5>12</h5>
+                        <p>My Rejected Notes</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="admin-nav-05">
+                        <h5>102</h5>
+                        <p>Buyer Requests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="download-top">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h3>
+                            In Progress Notes
+                        </h3>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+
+                    <ul>
+                        <li>
+                            <input type="password" class="form-group-download" id="exampleinputpassword" aria-describedby="passwordhelp" placeholder="   Search">
+                            <button type="submit" class="btn-download-dash btn-primary btn-submit"><span>SEARCH</span></button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <table class="tab-dash-01" width="100%">
+
+
+                    <thead class="for-font">
+
+
+                        <tr>
+                            <td>ADDED DATE</td>
+                            <td>TITLE</td>
+                            <td>CATEGORY</td>
+                            <td>STATUS</td>
+                            <td>ACTIONS</td>
+
+
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- 1st-->
+                            <td>09-10-2020</td>
+                            <td>Data Science</td>
+                            <td>Science</td>
+                            <td>Draft</td>
+                            <td>
+                                <i class="fa fa-pencil"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                    <!--2nd-->
+                    <tbody>
+                        <tr>
+
+                            <td>10-10-2020</td>
+
+                            <td>Accounts</td>
+                            <td>Commerce</td>
+                            <td>In Review</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                    <!--3rd-->
+                    <tbody>
+                        <tr>
+                            <td>11-10-2020</td>
+                            <td>Social Studies</td>
+                            <td>Social</td>
+                            <td>Submitted</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <!--4-->
+                    <tbody>
+                        <tr>
+                            <td>12-10-2020</td>
+                            <td>AI</td>
+                            <td>IT</td>
+                            <td>Submitted</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <!--5-->
+                    <tbody>
+                        <tr>
+                            <td>13-10-2020</td>
+                            <td>Lorem ipsum dolor sit ametesectetur</td>
+                            <td>Lorem</td>
+                            <td>Draft</td>
+                            <td>
+                                <i class="fa fa-pencil"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+
+
+                </table>
+
+                <div class="num-of">
+
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="chan-wid"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="download-top">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h3>
+                            Published Notes
+                        </h3>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+
+                    <ul>
+                        <li>
+                            <input type="password" class="form-group-download" id="exampleinputpassword" aria-describedby="passwordhelp" placeholder="   Search">
+                            <button type="submit" class="btn-download-dash btn-primary btn-submit"><span>SEARCH</span></button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <table class="tab-dash-02" width="100%">
+
+
+                    <thead class="for-font">
+
+
+                        <tr>
+                            <td>ADDED DATE</td>
+                            <td>TITLE</td>
+                            <td>CATEGORY</td>
+                            <td>SELL TYPE</td>
+                            <td>PRICE</td>
+                            <td>ACTIONS</td>
+
+
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- 1st-->
+                            <td>09-10-2020</td>
+                            <td>Data Science</td>
+                            <td>Science</td>
+                            <td>Paid</td>
+                            <td>$575</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                    <!--2nd-->
+                    <tbody>
+                        <tr>
+
+                            <td>10-10-2020</td>
+
+                            <td>Accounts</td>
+                            <td>Commerce</td>
+                            <td>Free</td>
+                            <td>$0</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                    <!--3rd-->
+                    <tbody>
+                        <tr>
+                            <td>11-10-2020</td>
+                            <td>Social Studies</td>
+                            <td>Social</td>
+                            <td>Free</td>
+                            <td>$0</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <!--4-->
+                    <tbody>
+                        <tr>
+                            <td>12-10-2020</td>
+                            <td>AI</td>
+                            <td>IT</td>
+                            <td>Paid</td>
+                            <td>$3542</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <!--5-->
+                    <tbody>
+                        <tr>
+                            <td>13-10-2020</td>
+                            <td>Lorem ipsum dolor sit ametesectetur</td>
+                            <td>Lorem</td>
+
+                            <td>Free</td>
+                            <td>$0</td>
+                            <td>
+                                <i class="fa fa-eye"></i>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+
+
+                </table>
+
+                <div class="num-of">
+
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="chan-wid"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="user-end-01">
+                    <p>Copyright <i class="fa fa-copyright"></i> All rights reserved</p>
+
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--jquery -->
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+</body>
+</html>
+

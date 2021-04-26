@@ -1,0 +1,182 @@
+﻿@model MitProjectAssignment.Models.UserRegistration
+@{
+    ViewBag.Title = "SignUpMethod";
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        Sign-up
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+    <!--sign-up password-->
+
+
+
+    <section id="signup-page">
+
+
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="signup-page-img">
+                    <img src="~/Images/pre-login/top-logo.png">
+                </div>
+
+
+
+
+
+
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="panel-03 panel-default">
+
+                        <div class="signup-text text-center">
+                            <h2>Create an Account</h2>
+                            <p>Enter your details to signup</p>
+
+                        </div>
+
+
+                        <div>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <!--Show details are saved successfully message-->
+                                    <div class="col-lg-12">@ViewBag.Message</div>
+                                </div><br />
+                                      <form>
+
+
+
+
+
+                                          <div class="form-group-signup">
+                                              <label for="exampleinputEmail1">First Name * </label>
+                                              <div>@Html.TextBoxFor(a => a.FirstName, htmlAttributes: new { @class = "form-control", @placeholder = "Enter Your First Name" })</div>
+                                              @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
+                                          </div>
+
+                                          <div class="form-group-signup">
+                                              <label for="exampleinputEmail1">Last Name *</label>
+                                              <div>@Html.TextBoxFor(a => a.LastName, htmlAttributes: new { @class = "form-control", @placeholder = "Enter Your Last Name" })</div>
+                                              @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+
+                                          </div>
+
+                                          <div class="form-group-signup">
+                                              <label for="exampleinputEmail1">Email *</label>
+                                              <div>@Html.TextBoxFor(a => a.Email, htmlAttributes: new { @class = "form-control", @placeholder = "Enter Your Email Address" })</div>
+                                              @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                                              @Html.ValidationMessage("EmailExists", new { @class = "text-danger" })
+
+
+                                          </div>
+
+
+
+                                          <div class="form-group-signup">
+                                              <label for="exampleinputEmail1"> password</label>
+                                              <div>@Html.TextBoxFor(a => a.Password, htmlAttributes: new { @class = "form-control", type = "Password", @placeholder = "Enter Your Password" })</div>
+                                              <i toggle="#password-field" class="fa  fa-eye field-icon toggle-password-02"></i>
+                                              @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                          </div>
+
+                                          <div class="form-group-signup">
+                                              <label for="exampleinputEmail1">  Confirm password</label>
+                                              <div>@Html.TextBoxFor(a => a.ConfirmPassword, htmlAttributes: new { @class = "form-control", type = "Password", @placeholder = "Re-enter Your Password" })</div>
+                                              <i toggle="#password-field" class="fa  fa-eye field-icon toggle-password-02"></i>
+                                              @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                          </div>
+
+
+
+                                          <input type="submit" value="Sign Up" class="btn-login btn-primary" background-color:#6255a5;" />
+                                          <div class="login-bottom label-text">
+
+                                              <p style="text-align:center; transform:translateY(10px)">Already have an account? <a href="">@Html.ActionLink("Login", "Login")</a></p>
+
+                                          </div>
+
+
+
+                                      </form>
+                            }
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!--jquery -->
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,181 @@
+﻿
+@model MitProjectAssignment.Models.ContactUsModel
+    @{ 
+        Layout = null;
+    }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        Contact Us
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+
+<body>
+
+    <section id="contact-us">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav">
+
+                    <img src="~/Images/pre-login/logo.png">
+
+
+
+                    <ul>
+                        <li><a href="#"><span>@Html.ActionLink("Search Note", "SearchNote", "SearchNote")</span></a></li>
+                        <li><a href="#">Sell Your Notes</a></li>
+                        <li><a href="#"><span>@Html.ActionLink("Buyer Request", "BuyerRequest", "BuyerRequest")</span></a></li>
+                        <li><a href="#"><span>@Html.ActionLink("FAQ", "FAQ", "FAQ")</span></a></li>
+                        <li><a href="#"><span>@Html.ActionLink("Contact Us", "COntactUs", "Home")</span></a></li>
+                        <li><a href="#"><img src="~/Images/User-Profile/user-img.png"></a></li>
+                        <li><button class="btn-user-logout" type="submit" style="background-color:#6255a5;">@Html.ActionLink("LogOut", "Login", "Register")</button></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="user-profile-image">
+
+            <img src="~/Images/User-Profile/banner-with-overlay.jpg">
+            <div class="user">
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+
+
+
+        @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken();
+            <div class="content-box-up">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="contact-heading">
+                                <h3 style="font-weight: bold;">Get in Touch</h3>
+                                <p>Let us know how to get back to you
+                                <p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-mar">
+                            <form>
+                                <div class="form-group s3">
+                                    <label for="exampleInputName">Full Name<span>&#42;</span></label>
+                                    @Html.TextBoxFor(x => x.FullName, "", htmlAttributes: new { @class = "form-control", @placeholder = "Enter your Full Name" })
+                                    @Html.ValidationMessageFor(x => x.FullName, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group s3">
+                                    <label for="exampleInputEmail1">Email Address<span>&#42;</span></label>
+                                    @Html.TextBoxFor(x => x.EmailID, "", htmlAttributes: new { @class = "form-control", @placeholder = "Enter your Email Address" })
+                                    @Html.ValidationMessageFor(x => x.EmailID, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group s3">
+                                    <label for="name">Subject<span>&#42;</span></label><br>
+                                    @Html.TextBoxFor(x => x.Subject, "", htmlAttributes: new { @class = "form-control", @placeholder = "Enter your Subject" })
+                                    @Html.ValidationMessageFor(x => x.Subject, "", new { @class = "text-danger" })
+                                </div>
+
+
+
+
+                            </form>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea3">Comments/Questions<span>&#42;</span></label>
+                                @Html.TextAreaFor(x => x.Comments, htmlAttributes: new { @class = "form-control", rows = "9", @placeholder = "Comments....." })
+                                @Html.ValidationMessageFor(x => x.Comments, "", new { @class = "text-danger" })
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary btn-contact" style="background-color:#6255a5;"><span>SUBMIT</span></button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        }
+
+        <div class="container">
+            <div class="row">
+
+                <div class="user-end-01">
+                    <p>Copyright <i class="fa fa-copyright"></i> All rights reserved</p>
+
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!--jquery -->
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+
+</body>
+
+</html>
