@@ -1,0 +1,250 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<MitProjectAssignment.SellerNotes>
+
+@{
+
+
+    Layout = null;
+
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <title>Assignment-3</title>
+
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+
+</head>
+<body>
+
+
+    <section id="user-profile-page">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav">
+
+                    <img src="~/Images/pre-login/logo.png">
+
+
+
+                    <ul>
+                        <li><a href="@Url.Action("SearchNote","SearchNote")">Search Note</a></li>
+                        <li><a href="@Url.Action("Dashboard","Dashboard")">Sell Your Notes</a></li>
+                        <li><a href="@Url.Action("BuyerRequest","BuyerRequest")">Buyer Request</a></li>
+                        <li><a href="@Url.Action("FAQ","FAQ")">FAQ</a></li>
+                        <li><a href="@Url.Action("ContactUs","Home")">Contactus</a></li>
+
+
+                        <li>
+
+                            <img src="~/Images/User-Profile/user-img.png" />
+
+
+                        </li>
+
+                        <li><button class="btn-user-logout" type="submit" style="background-color:#6255a5;" onclick="location.href='@Url.Action("Logout", "Register")'">Logout</button></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- User Profile Image -->
+        <div class="user-profile-image">
+
+            <img src="~/Images/User-Profile/banner-with-overlay.jpg">
+            <div class="user">
+                <h2>Search Notes</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="search-heading">
+                    <h3>Search and Filter notes</h3>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Search & Filters notes -->
+
+
+
+        @using (Html.BeginForm("SearchNotes", "SearchNote", FormMethod.Get))
+        {
+            <div class="container">
+                <div class="row" style="background-color:ghostwhite">
+                    <div class="search-page-icon">
+
+                        <div class="col-md-12">
+                            <i class="fa fa-search"></i>
+
+                            <input type="text" id="search-01" name="search" placeholder="Search notes here">
+
+                        </div>
+
+                        <div class="col-md-2">
+                            @Html.DropDownList("ID", ViewBag.Type as SelectList, "Select type", new { @class = "form-control input-in-grey-box", @id = "exampleFormControlSelect1" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.DropDownList("ID", ViewBag.Category as SelectList, "Select Category", new { @class = "form-control input-in-grey-box", @id = "exampleFormControlSelect1" })
+                        </div>
+                        <div class="col-md-2">
+
+                            @Html.DropDownList("ID", ViewBag.Univercity as SelectList, "Select University", new { @class = "form-control input-in-grey-box", @id = "exampleFormControlSelect1" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.DropDownList("ID", ViewBag.Course as SelectList, "Select Courser", new { @class = "form-control input-in-grey-box", @id = "exampleFormControlSelect1" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.DropDownList("ID", ViewBag.Country as SelectList, "Select Country", new { @class = "form-control input-in-grey-box", @id = "exampleFormControlSelect1" })
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control input-in-grey-box" id="exampleFormControlSelect1">
+                                <option>Select rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        }
+        
+
+        <!-- Search & Filters notes End -->
+
+        
+
+        <!-- Total Notes -->
+
+        <div class="container">
+            <div class="row">
+                <div class="search-heading">
+                    <h3>Total 18 notes</h3>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="search-photo">
+
+                    @if (Model.Count() == 0)
+                    {
+                        <h4>No record found</h4>
+                    }
+
+                    
+
+
+
+
+                        @foreach (var i in Model)
+                        {
+                            <div class="col-md-4">
+                                <div class="book">
+
+                                    <img class="card-img-top note-image-box" src="../@i.DisplayPicture">
+                                    <h4>@i.Title</h4>
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-university">@i.UniversityName, @i.Countrie.Name</i></li>
+
+                                            @if (@i.NumberofPages == null)
+                                            {
+                                            <li><i class="fa fa-book"></i>No. Of Pages Not Available</li>
+                                        }
+                                        else
+                                        {
+                                            <li><i class="fa fa-book">  @i.NumberofPages Pages</i></li>
+                                        }
+
+                                    <li><i class="fa fa-flag"></i><span class="red-text" style="color:red;margin-left:10px"> 5 Users marked this note as inappropriate</span></li>
+                                    </ul>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <div class="reviews" style="margin-left:20px">100 Reviews</div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            }
+
+
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="user-end-01">
+                    <p>Copyright <i class="fa fa-copyright"></i> All rights reserved</p>
+
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

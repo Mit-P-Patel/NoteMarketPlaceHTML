@@ -1,0 +1,261 @@
+﻿
+@model IEnumerable<MitProjectAssignment.Downloads>
+
+@{
+    Layout = null;
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+
+        <hr />
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>CustomerID</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>dffh</th>
+            </tr>
+            @foreach (Downloads customer in Model)
+            {
+                <tr>
+                    <td>@customer.NoteID</td>
+                    <td>@customer.NoteTitle</td>
+                    <td>@customer.NoteCategory</td>
+                    <td>@customer.IsPaid</td>
+                    <td>@customer.PurchasedPrice</td>
+                    <td>@customer.AttachmentDownloadedDate</td>
+
+                </tr>
+            }
+        </table>
+    </body>
+    </html>*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tage-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    <!--Title-->
+    <title>
+        My download
+    </title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+    
+
+    
+</head>
+
+
+<body>
+    <section id="my-download-01">
+
+        <!--header -->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav">
+
+                    <img src="~/Images/pre-login/logo.png">
+
+
+
+                    <ul>
+                        <li><a href="#">Search Notes</a></li>
+                        <li><a href="#">Sell Your Notes</a></li>
+                        <li><a href="#">Buyer Requests</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#"><img src="~/Images/User-Profile/user-img.png"></a></li>
+                        <li><a href="#"><button class="btn-user-logout" type="submit">Logout</button></a></li>
+                    </ul><hr>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- header end-->
+        <div class="container">
+
+            <div class="row">
+
+
+                <div class="hover_bkgr_fricc">
+                    <span class="helper"></span>
+                    <div>
+                        <div class="popupCloseButton">&times;</div>
+                        <p>Download Note</p>
+                        <p>Add Reviews/Feedback</p>
+                        <p>Report as inappropriate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="download-top">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <h3>
+                            My Downloads
+                        </h3>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+
+                    <ul>
+                        <li>
+                            <input type="text" class="form-group-download" id="exampleinputpassword" aria-describedby="passwordhelp" placeholder="   Search">
+                            <button type="submit" class="btn-download btn-primary btn-submit" value="find"><span>SEARCH</span></button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <table class="tab-down" width="100%">
+
+
+                    <thead class="for-font">
+
+
+                        <tr>
+                            <td>SR NO.</td>
+                            <td>NOTE TITTLE</td>
+                            <td>CATEGORY</td>
+                            <td>BUYER</td>
+                            
+                            <td>Price</td>
+                            <td>Downloaded</td>
+                            <td>Date/Time</td>
+                            <td></td>
+                            
+
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        <!-- 1st-->
+                        @foreach (Downloads customer in Model)
+                        {
+                            <tr>
+                            
+                                <td>@Html.DisplayFor(x =>customer.NoteID)</td>
+                                <td>@Html.DisplayFor(x => customer.NoteTitle)</td>
+                                <td>@Html.DisplayFor(x => customer.NoteCategory)</td>
+                                <td>testing123@gmail.com</td>
+                                
+                                <td>@Html.DisplayFor(x => customer.PurchasedPrice)</td>
+                                <td>27 Nov 2020</td>
+                                <td>11:24:34</td>
+                                <td><span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span></td>
+                                
+
+                            </tr>
+                        }
+                    </tbody>
+                    <!--2nd-->
+                    
+
+
+
+                </table>
+
+                <div class="num-of">
+
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="chan-wid"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+
+        <div class="container">
+            <div class="row">
+
+                <div class="user-end-01">
+                    <p>Copyright <i class="fa fa-copyright"></i> All rights reserved</p>
+
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--footer end-->
+
+
+    </section>
+    <script src="~/js/jquery.js"></script>
+
+    <!--Bootstrap js -->
+    <script src="~/js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+    <!--custom js-->
+    <script src="~/js/script.js"></script>
+  
+
+</body>
+
+
+
+
+
+
+</html>

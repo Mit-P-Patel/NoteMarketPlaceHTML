@@ -1,0 +1,132 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <title>Assignment-3</title>
+
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans
+         :wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="~/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <style>
+
+
+        .menu {
+            position: absolute;
+            transform: translate(-35%,6%);
+            padding: 0 10px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+            .menu > ul > li > a:hover {
+                border: 1px solid #6255a5;
+                background: #6355a5;
+                transition: 200ms all linear;
+                color: #fff;
+            }
+
+            .menu.active {
+                visibility: visible;
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+
+
+    <section id="user-profile-page">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav">
+
+                    <img src="~/Images/pre-login/logo.png">
+
+
+
+                    <ul>
+                        <li><a href="@Url.Action("SearchNote","SearchNote")">Search Note</a></li>
+                        <li><a href="@Url.Action("Dashboard","Dashboard")">Sell Your Notes</a></li>
+                        <li><a href="@Url.Action("BuyerRequest","BuyerRequest")">Buyer Request</a></li>
+                        <li><a href="@Url.Action("FAQ","FAQ")">FAQ</a></li>
+                        <li><a href="@Url.Action("ContactUs","Home")">Contactus</a></li>
+
+
+                        <li>
+                            <div class="action">
+                                <div class="profile" onclick="menuToggle();">
+                                    <img style="border-radius:50%;height:40px;width:40px;" src="@Url.Content(Model.profileUrl)" />
+                                </div>
+                                <div class="menu" style="z-index:5;text-align:center">
+                                    <ul>
+                                        <li style="padding:10px">
+                                            <a style="padding:13px 30px" href="@Url.Action("UserProfile","UserProfile")">My Profile</a><br /><br />
+                                            <a style="padding:13px 30px" href="@Url.Action("Downloads","Downloads")">MyDownload</a><br /><br />
+                                            <a style="padding:13px 30px" href="@Url.Action("SoldNotes","SoldNotes")">My Sold Notes</a><br /><br />
+                                            <a style="padding:13px 30px" href="@Url.Action("RejectedNotes","RejectedNotes")">My Rejected Notes</a><br /><br />
+                                            <a style="padding:13px 30px" href="@Url.Action("ChangePassword","ChangePassword")">Change Password</a><br /><br />
+                                            <a style="padding:13px 30px" href="@Url.Action("LogOut","Register")">Logout</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                </div>
+
+                                <script>function menuToggle() {
+                                        const toggleMenu = document.querySelector('.menu');
+                                        toggleMenu.classList.toggle('active')
+                                    }</script>
+                            </li>
+
+                        <li><button class="btn-user-logout" type="submit" style="background-color:#6255a5;" onclick="location.href='@Url.Action("Logout", "Register")'">Logout</button></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        @RenderBody();
+
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="user-end-01">
+                    <p>Copyright <i class="fa fa-copyright"></i> All rights reserved</p>
+
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
